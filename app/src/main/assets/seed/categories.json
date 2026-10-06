@@ -1,0 +1,119 @@
+[
+  {
+    "id": 2,
+    "name": "Povrće",
+    "weeklyTarget": 7,
+    "countingMode": "ENTRIES",
+    "imageQuery": "fresh vegetables",
+    "active": true,
+    "sortOrder": 0
+  },
+  {
+    "id": 1,
+    "name": "Voće",
+    "weeklyTarget": 14,
+    "countingMode": "ENTRIES",
+    "imageQuery": "fresh fruit",
+    "active": true,
+    "sortOrder": 1
+  },
+  {
+    "id": 4,
+    "name": "Riba",
+    "weeklyTarget": 2,
+    "countingMode": "ENTRIES",
+    "imageQuery": "salmon fish food",
+    "active": true,
+    "sortOrder": 2
+  },
+  {
+    "id": 6,
+    "name": "Jaja",
+    "weeklyTarget": 4,
+    "countingMode": "ENTRIES",
+    "imageQuery": "eggs food",
+    "active": true,
+    "sortOrder": 3
+  },
+  {
+    "id": 7,
+    "name": "Mahunarke",
+    "weeklyTarget": 2,
+    "countingMode": "ENTRIES",
+    "imageQuery": "beans lentils food",
+    "active": true,
+    "sortOrder": 4
+  },
+  {
+    "id": 8,
+    "name": "Piletina / puretina",
+    "weeklyTarget": 2,
+    "countingMode": "ENTRIES",
+    "imageQuery": "chicken food",
+    "active": true,
+    "sortOrder": 5
+  },
+  {
+    "id": 9,
+    "name": "Crveno meso",
+    "weeklyTarget": 1,
+    "countingMode": "ENTRIES",
+    "imageQuery": "beef food",
+    "active": true,
+    "sortOrder": 6
+  },
+  {
+    "id": 10,
+    "name": "Mliječni proizvodi",
+    "weeklyTarget": 7,
+    "countingMode": "ENTRIES",
+    "imageQuery": "dairy products",
+    "active": true,
+    "sortOrder": 7
+  },
+  {
+    "id": 11,
+    "name": "Orašasti plodovi",
+    "weeklyTarget": 4,
+    "countingMode": "DAYS",
+    "imageQuery": "nuts almonds walnuts",
+    "active": true,
+    "sortOrder": 8
+  },
+  {
+    "id": 12,
+    "name": "Sjemenke",
+    "weeklyTarget": 2,
+    "countingMode": "ENTRIES",
+    "imageQuery": "edible seeds",
+    "active": true,
+    "sortOrder": 9
+  },
+  {
+    "id": 13,
+    "name": "Žitarice",
+    "weeklyTarget": 7,
+    "countingMode": "DAYS",
+    "imageQuery": "whole grains food",
+    "active": true,
+    "sortOrder": 10
+  },
+  {
+    "id": 14,
+    "name": "Krumpir / batat",
+    "weeklyTarget": 2,
+    "countingMode": "ENTRIES",
+    "imageQuery": "potato sweet potato",
+    "active": true,
+    "sortOrder": 11
+  },
+  {
+    "id": 5,
+    "name": "Jela",
+    "weeklyTarget": 0,
+    "countingMode": "ENTRIES",
+    "imageQuery": "vegetable soup bowl",
+    "active": true,
+    "sortOrder": 12
+  }
+]

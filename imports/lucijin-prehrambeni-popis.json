@@ -1,0 +1,456 @@
+{
+  "kind": "dietPlan",
+  "formatVersion": 1,
+  "categories": [
+    {
+      "name": "Povrće",
+      "weeklyTarget": 7,
+      "countingMode": "ENTRIES",
+      "imageQuery": "fresh vegetables",
+      "foods": [
+        {
+          "name": "Brokula",
+          "imageQuery": "broccoli vegetable"
+        },
+        {
+          "name": "Cvjetača",
+          "imageQuery": "cauliflower vegetable"
+        },
+        {
+          "name": "Mrkva",
+          "imageQuery": "carrot vegetable"
+        },
+        {
+          "name": "Špinat",
+          "imageQuery": "spinach leaves"
+        },
+        {
+          "name": "Blitva",
+          "imageQuery": "swiss chard"
+        },
+        {
+          "name": "Kelj",
+          "imageQuery": "kale vegetable"
+        },
+        {
+          "name": "Rajčica",
+          "imageQuery": "tomato vegetable"
+        },
+        {
+          "name": "Paprika",
+          "imageQuery": "bell pepper"
+        },
+        {
+          "name": "Tikvica",
+          "imageQuery": "zucchini"
+        },
+        {
+          "name": "Luk",
+          "imageQuery": "onion vegetable"
+        },
+        {
+          "name": "Poriluk",
+          "imageQuery": "leek vegetable"
+        },
+        {
+          "name": "Bundeva",
+          "imageQuery": "pumpkin vegetable"
+        }
+      ]
+    },
+    {
+      "name": "Voće",
+      "weeklyTarget": 14,
+      "countingMode": "ENTRIES",
+      "imageQuery": "fresh fruit",
+      "foods": [
+        {
+          "name": "Jabuka",
+          "imageQuery": "apple fruit"
+        },
+        {
+          "name": "Banana",
+          "imageQuery": "banana fruit"
+        },
+        {
+          "name": "Naranča",
+          "imageQuery": "orange fruit"
+        },
+        {
+          "name": "Mandarina",
+          "imageQuery": "mandarin orange"
+        },
+        {
+          "name": "Kruška",
+          "imageQuery": "pear fruit"
+        },
+        {
+          "name": "Šljiva",
+          "imageQuery": "plum fruit"
+        },
+        {
+          "name": "Breskva",
+          "imageQuery": "peach fruit"
+        },
+        {
+          "name": "Marelica",
+          "imageQuery": "apricot fruit"
+        },
+        {
+          "name": "Jagode",
+          "imageQuery": "strawberries"
+        },
+        {
+          "name": "Borovnice",
+          "imageQuery": "blueberries"
+        },
+        {
+          "name": "Maline",
+          "imageQuery": "raspberries"
+        },
+        {
+          "name": "Trešnje",
+          "imageQuery": "cherries"
+        },
+        {
+          "name": "Grožđe",
+          "imageQuery": "grapes"
+        },
+        {
+          "name": "Avokado",
+          "imageQuery": "avocado"
+        }
+      ]
+    },
+    {
+      "name": "Riba",
+      "weeklyTarget": 2,
+      "countingMode": "ENTRIES",
+      "imageQuery": "salmon fish food",
+      "foods": [
+        {
+          "name": "Sardina",
+          "imageQuery": "sardines food"
+        },
+        {
+          "name": "Losos",
+          "imageQuery": "salmon food"
+        },
+        {
+          "name": "Pastrva",
+          "imageQuery": "trout fish"
+        },
+        {
+          "name": "Skuša",
+          "imageQuery": "mackerel fish"
+        },
+        {
+          "name": "Orada",
+          "imageQuery": "sea bream fish"
+        },
+        {
+          "name": "Brancin",
+          "imageQuery": "sea bass fish"
+        },
+        {
+          "name": "Oslić",
+          "imageQuery": "hake fish"
+        },
+        {
+          "name": "Tuna",
+          "imageQuery": "tuna fish"
+        },
+        {
+          "name": "Bakalar",
+          "imageQuery": "cod fish"
+        },
+        {
+          "name": "Šaran",
+          "imageQuery": "carp fish"
+        },
+        {
+          "name": "Lignje",
+          "imageQuery": "calamari food"
+        },
+        {
+          "name": "Kozice",
+          "imageQuery": "shrimp food"
+        }
+      ]
+    },
+    {
+      "name": "Jaja",
+      "weeklyTarget": 4,
+      "countingMode": "ENTRIES",
+      "imageQuery": "eggs food",
+      "foods": [
+        {
+          "name": "Jaje",
+          "imageQuery": "boiled egg"
+        }
+      ]
+    },
+    {
+      "name": "Mahunarke",
+      "weeklyTarget": 2,
+      "countingMode": "ENTRIES",
+      "imageQuery": "beans lentils food",
+      "foods": [
+        {
+          "name": "Grah",
+          "imageQuery": "beans food"
+        },
+        {
+          "name": "Leća",
+          "imageQuery": "lentils food"
+        },
+        {
+          "name": "Slanutak",
+          "imageQuery": "chickpeas food"
+        },
+        {
+          "name": "Grašak",
+          "imageQuery": "green peas"
+        },
+        {
+          "name": "Bob",
+          "imageQuery": "broad beans"
+        }
+      ]
+    },
+    {
+      "name": "Piletina / puretina",
+      "weeklyTarget": 2,
+      "countingMode": "ENTRIES",
+      "imageQuery": "chicken food",
+      "foods": [
+        {
+          "name": "Piletina",
+          "imageQuery": "chicken food"
+        },
+        {
+          "name": "Puretina",
+          "imageQuery": "turkey food"
+        }
+      ]
+    },
+    {
+      "name": "Crveno meso",
+      "weeklyTarget": 1,
+      "countingMode": "ENTRIES",
+      "imageQuery": "beef food",
+      "foods": [
+        {
+          "name": "Govedina",
+          "imageQuery": "beef food"
+        },
+        {
+          "name": "Junetina",
+          "imageQuery": "beef food"
+        },
+        {
+          "name": "Teletina",
+          "imageQuery": "veal meat"
+        },
+        {
+          "name": "Svinjetina",
+          "imageQuery": "pork meat"
+        },
+        {
+          "name": "Janjetina",
+          "imageQuery": "lamb meat"
+        }
+      ]
+    },
+    {
+      "name": "Mliječni proizvodi",
+      "weeklyTarget": 7,
+      "countingMode": "ENTRIES",
+      "imageQuery": "dairy products",
+      "foods": [
+        {
+          "name": "Mlijeko",
+          "imageQuery": "milk glass"
+        },
+        {
+          "name": "Jogurt",
+          "imageQuery": "yogurt bowl"
+        },
+        {
+          "name": "Grčki jogurt",
+          "imageQuery": "greek yogurt"
+        },
+        {
+          "name": "Skyr",
+          "imageQuery": "yogurt"
+        },
+        {
+          "name": "Svježi sir",
+          "imageQuery": "cottage cheese"
+        },
+        {
+          "name": "Sir",
+          "imageQuery": "cheese food"
+        },
+        {
+          "name": "Kiselo vrhnje",
+          "imageQuery": "sour cream"
+        }
+      ]
+    },
+    {
+      "name": "Orašasti plodovi",
+      "weeklyTarget": 4,
+      "countingMode": "DAYS",
+      "imageQuery": "nuts almonds walnuts",
+      "foods": [
+        {
+          "name": "Orasi",
+          "imageQuery": "walnuts nuts",
+          "aliases": [
+            "Orah"
+          ]
+        },
+        {
+          "name": "Bademi",
+          "imageQuery": "almonds nuts",
+          "aliases": [
+            "Badem"
+          ]
+        },
+        {
+          "name": "Lješnjaci",
+          "imageQuery": "hazelnuts",
+          "aliases": [
+            "Lješnjak"
+          ]
+        },
+        {
+          "name": "Pistacije",
+          "imageQuery": "pistachios"
+        },
+        {
+          "name": "Indijski oraščići",
+          "imageQuery": "cashew nuts"
+        },
+        {
+          "name": "Brazilski oraščići",
+          "imageQuery": "brazil nuts"
+        },
+        {
+          "name": "Kikiriki",
+          "imageQuery": "peanuts"
+        }
+      ]
+    },
+    {
+      "name": "Sjemenke",
+      "weeklyTarget": 2,
+      "countingMode": "ENTRIES",
+      "imageQuery": "edible seeds",
+      "foods": [
+        {
+          "name": "Mljeveni lan",
+          "imageQuery": "flax seeds",
+          "aliases": [
+            "Lanene sjemenke"
+          ]
+        },
+        {
+          "name": "Chia",
+          "imageQuery": "chia seeds",
+          "aliases": [
+            "Chia sjemenke"
+          ]
+        },
+        {
+          "name": "Bučine sjemenke",
+          "imageQuery": "pumpkin seeds"
+        },
+        {
+          "name": "Suncokretove sjemenke",
+          "imageQuery": "sunflower seeds"
+        },
+        {
+          "name": "Sezam",
+          "imageQuery": "sesame seeds"
+        },
+        {
+          "name": "Mak",
+          "imageQuery": "poppy seeds"
+        }
+      ]
+    },
+    {
+      "name": "Žitarice",
+      "weeklyTarget": 7,
+      "countingMode": "DAYS",
+      "imageQuery": "whole grains food",
+      "foods": [
+        {
+          "name": "Kruh",
+          "imageQuery": "bread"
+        },
+        {
+          "name": "Zobene pahuljice",
+          "imageQuery": "oats",
+          "aliases": [
+            "Zob"
+          ]
+        },
+        {
+          "name": "Muesli",
+          "imageQuery": "muesli"
+        },
+        {
+          "name": "Riža",
+          "imageQuery": "rice food"
+        },
+        {
+          "name": "Tjestenina",
+          "imageQuery": "pasta food"
+        },
+        {
+          "name": "Palenta",
+          "imageQuery": "polenta"
+        },
+        {
+          "name": "Bulgur",
+          "imageQuery": "bulgur"
+        },
+        {
+          "name": "Kus-kus",
+          "imageQuery": "couscous"
+        },
+        {
+          "name": "Ječam",
+          "imageQuery": "barley grain"
+        },
+        {
+          "name": "Proso",
+          "imageQuery": "millet grain"
+        },
+        {
+          "name": "Heljda",
+          "imageQuery": "buckwheat"
+        }
+      ]
+    },
+    {
+      "name": "Krumpir / batat",
+      "weeklyTarget": 2,
+      "countingMode": "ENTRIES",
+      "imageQuery": "potato sweet potato",
+      "foods": [
+        {
+          "name": "Krumpir",
+          "imageQuery": "potato"
+        },
+        {
+          "name": "Batat",
+          "imageQuery": "sweet potato"
+        }
+      ]
+    }
+  ]
+}

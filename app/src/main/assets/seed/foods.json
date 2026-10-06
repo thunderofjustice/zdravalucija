@@ -1,0 +1,758 @@
+[
+  {
+    "id": 4,
+    "name": "Brokula",
+    "categoryId": 2,
+    "weeklyTarget": 0,
+    "imageQuery": "broccoli vegetable",
+    "active": true,
+    "sortOrder": 0
+  },
+  {
+    "id": 5,
+    "name": "Cvjetača",
+    "categoryId": 2,
+    "weeklyTarget": 0,
+    "imageQuery": "cauliflower vegetable",
+    "active": true,
+    "sortOrder": 1
+  },
+  {
+    "id": 6,
+    "name": "Mrkva",
+    "categoryId": 2,
+    "weeklyTarget": 0,
+    "imageQuery": "carrot vegetable",
+    "active": true,
+    "sortOrder": 2
+  },
+  {
+    "id": 10,
+    "name": "Špinat",
+    "categoryId": 2,
+    "weeklyTarget": 0,
+    "imageQuery": "spinach leaves",
+    "active": true,
+    "sortOrder": 3
+  },
+  {
+    "id": 11,
+    "name": "Blitva",
+    "categoryId": 2,
+    "weeklyTarget": 0,
+    "imageQuery": "swiss chard",
+    "active": true,
+    "sortOrder": 4
+  },
+  {
+    "id": 12,
+    "name": "Kelj",
+    "categoryId": 2,
+    "weeklyTarget": 0,
+    "imageQuery": "kale vegetable",
+    "active": true,
+    "sortOrder": 5
+  },
+  {
+    "id": 13,
+    "name": "Rajčica",
+    "categoryId": 2,
+    "weeklyTarget": 0,
+    "imageQuery": "tomato vegetable",
+    "active": true,
+    "sortOrder": 6
+  },
+  {
+    "id": 14,
+    "name": "Paprika",
+    "categoryId": 2,
+    "weeklyTarget": 0,
+    "imageQuery": "bell pepper",
+    "active": true,
+    "sortOrder": 7
+  },
+  {
+    "id": 15,
+    "name": "Tikvica",
+    "categoryId": 2,
+    "weeklyTarget": 0,
+    "imageQuery": "zucchini",
+    "active": true,
+    "sortOrder": 8
+  },
+  {
+    "id": 16,
+    "name": "Luk",
+    "categoryId": 2,
+    "weeklyTarget": 0,
+    "imageQuery": "onion vegetable",
+    "active": true,
+    "sortOrder": 9
+  },
+  {
+    "id": 17,
+    "name": "Poriluk",
+    "categoryId": 2,
+    "weeklyTarget": 0,
+    "imageQuery": "leek vegetable",
+    "active": true,
+    "sortOrder": 10
+  },
+  {
+    "id": 18,
+    "name": "Bundeva",
+    "categoryId": 2,
+    "weeklyTarget": 0,
+    "imageQuery": "pumpkin vegetable",
+    "active": true,
+    "sortOrder": 11
+  },
+  {
+    "id": 1,
+    "name": "Jabuka",
+    "categoryId": 1,
+    "weeklyTarget": 0,
+    "imageQuery": "apple fruit",
+    "active": true,
+    "sortOrder": 12
+  },
+  {
+    "id": 2,
+    "name": "Banana",
+    "categoryId": 1,
+    "weeklyTarget": 0,
+    "imageQuery": "banana fruit",
+    "active": true,
+    "sortOrder": 13
+  },
+  {
+    "id": 3,
+    "name": "Naranča",
+    "categoryId": 1,
+    "weeklyTarget": 0,
+    "imageQuery": "orange fruit",
+    "active": true,
+    "sortOrder": 14
+  },
+  {
+    "id": 19,
+    "name": "Mandarina",
+    "categoryId": 1,
+    "weeklyTarget": 0,
+    "imageQuery": "mandarin orange",
+    "active": true,
+    "sortOrder": 15
+  },
+  {
+    "id": 20,
+    "name": "Kruška",
+    "categoryId": 1,
+    "weeklyTarget": 0,
+    "imageQuery": "pear fruit",
+    "active": true,
+    "sortOrder": 16
+  },
+  {
+    "id": 21,
+    "name": "Šljiva",
+    "categoryId": 1,
+    "weeklyTarget": 0,
+    "imageQuery": "plum fruit",
+    "active": true,
+    "sortOrder": 17
+  },
+  {
+    "id": 22,
+    "name": "Breskva",
+    "categoryId": 1,
+    "weeklyTarget": 0,
+    "imageQuery": "peach fruit",
+    "active": true,
+    "sortOrder": 18
+  },
+  {
+    "id": 23,
+    "name": "Marelica",
+    "categoryId": 1,
+    "weeklyTarget": 0,
+    "imageQuery": "apricot fruit",
+    "active": true,
+    "sortOrder": 19
+  },
+  {
+    "id": 24,
+    "name": "Jagode",
+    "categoryId": 1,
+    "weeklyTarget": 0,
+    "imageQuery": "strawberries",
+    "active": true,
+    "sortOrder": 20
+  },
+  {
+    "id": 25,
+    "name": "Borovnice",
+    "categoryId": 1,
+    "weeklyTarget": 0,
+    "imageQuery": "blueberries",
+    "active": true,
+    "sortOrder": 21
+  },
+  {
+    "id": 26,
+    "name": "Maline",
+    "categoryId": 1,
+    "weeklyTarget": 0,
+    "imageQuery": "raspberries",
+    "active": true,
+    "sortOrder": 22
+  },
+  {
+    "id": 27,
+    "name": "Trešnje",
+    "categoryId": 1,
+    "weeklyTarget": 0,
+    "imageQuery": "cherries",
+    "active": true,
+    "sortOrder": 23
+  },
+  {
+    "id": 28,
+    "name": "Grožđe",
+    "categoryId": 1,
+    "weeklyTarget": 0,
+    "imageQuery": "grapes",
+    "active": true,
+    "sortOrder": 24
+  },
+  {
+    "id": 29,
+    "name": "Avokado",
+    "categoryId": 1,
+    "weeklyTarget": 0,
+    "imageQuery": "avocado",
+    "active": true,
+    "sortOrder": 25
+  },
+  {
+    "id": 30,
+    "name": "Sardina",
+    "categoryId": 4,
+    "weeklyTarget": 0,
+    "imageQuery": "sardines food",
+    "active": true,
+    "sortOrder": 26
+  },
+  {
+    "id": 9,
+    "name": "Losos",
+    "categoryId": 4,
+    "weeklyTarget": 0,
+    "imageQuery": "salmon food",
+    "active": true,
+    "sortOrder": 27
+  },
+  {
+    "id": 31,
+    "name": "Pastrva",
+    "categoryId": 4,
+    "weeklyTarget": 0,
+    "imageQuery": "trout fish",
+    "active": true,
+    "sortOrder": 28
+  },
+  {
+    "id": 32,
+    "name": "Skuša",
+    "categoryId": 4,
+    "weeklyTarget": 0,
+    "imageQuery": "mackerel fish",
+    "active": true,
+    "sortOrder": 29
+  },
+  {
+    "id": 33,
+    "name": "Orada",
+    "categoryId": 4,
+    "weeklyTarget": 0,
+    "imageQuery": "sea bream fish",
+    "active": true,
+    "sortOrder": 30
+  },
+  {
+    "id": 34,
+    "name": "Brancin",
+    "categoryId": 4,
+    "weeklyTarget": 0,
+    "imageQuery": "sea bass fish",
+    "active": true,
+    "sortOrder": 31
+  },
+  {
+    "id": 35,
+    "name": "Oslić",
+    "categoryId": 4,
+    "weeklyTarget": 0,
+    "imageQuery": "hake fish",
+    "active": true,
+    "sortOrder": 32
+  },
+  {
+    "id": 36,
+    "name": "Tuna",
+    "categoryId": 4,
+    "weeklyTarget": 0,
+    "imageQuery": "tuna fish",
+    "active": true,
+    "sortOrder": 33
+  },
+  {
+    "id": 37,
+    "name": "Bakalar",
+    "categoryId": 4,
+    "weeklyTarget": 0,
+    "imageQuery": "cod fish",
+    "active": true,
+    "sortOrder": 34
+  },
+  {
+    "id": 38,
+    "name": "Šaran",
+    "categoryId": 4,
+    "weeklyTarget": 0,
+    "imageQuery": "carp fish",
+    "active": true,
+    "sortOrder": 35
+  },
+  {
+    "id": 39,
+    "name": "Lignje",
+    "categoryId": 4,
+    "weeklyTarget": 0,
+    "imageQuery": "calamari food",
+    "active": true,
+    "sortOrder": 36
+  },
+  {
+    "id": 40,
+    "name": "Kozice",
+    "categoryId": 4,
+    "weeklyTarget": 0,
+    "imageQuery": "shrimp food",
+    "active": true,
+    "sortOrder": 37
+  },
+  {
+    "id": 41,
+    "name": "Jaje",
+    "categoryId": 6,
+    "weeklyTarget": 0,
+    "imageQuery": "boiled egg",
+    "active": true,
+    "sortOrder": 38
+  },
+  {
+    "id": 42,
+    "name": "Grah",
+    "categoryId": 7,
+    "weeklyTarget": 0,
+    "imageQuery": "beans food",
+    "active": true,
+    "sortOrder": 39
+  },
+  {
+    "id": 43,
+    "name": "Leća",
+    "categoryId": 7,
+    "weeklyTarget": 0,
+    "imageQuery": "lentils food",
+    "active": true,
+    "sortOrder": 40
+  },
+  {
+    "id": 44,
+    "name": "Slanutak",
+    "categoryId": 7,
+    "weeklyTarget": 0,
+    "imageQuery": "chickpeas food",
+    "active": true,
+    "sortOrder": 41
+  },
+  {
+    "id": 45,
+    "name": "Grašak",
+    "categoryId": 7,
+    "weeklyTarget": 0,
+    "imageQuery": "green peas",
+    "active": true,
+    "sortOrder": 42
+  },
+  {
+    "id": 46,
+    "name": "Bob",
+    "categoryId": 7,
+    "weeklyTarget": 0,
+    "imageQuery": "broad beans",
+    "active": true,
+    "sortOrder": 43
+  },
+  {
+    "id": 7,
+    "name": "Piletina",
+    "categoryId": 8,
+    "weeklyTarget": 0,
+    "imageQuery": "chicken food",
+    "active": true,
+    "sortOrder": 44
+  },
+  {
+    "id": 47,
+    "name": "Puretina",
+    "categoryId": 8,
+    "weeklyTarget": 0,
+    "imageQuery": "turkey food",
+    "active": true,
+    "sortOrder": 45
+  },
+  {
+    "id": 48,
+    "name": "Govedina",
+    "categoryId": 9,
+    "weeklyTarget": 0,
+    "imageQuery": "beef food",
+    "active": true,
+    "sortOrder": 46
+  },
+  {
+    "id": 8,
+    "name": "Junetina",
+    "categoryId": 9,
+    "weeklyTarget": 0,
+    "imageQuery": "beef food",
+    "active": true,
+    "sortOrder": 47
+  },
+  {
+    "id": 49,
+    "name": "Teletina",
+    "categoryId": 9,
+    "weeklyTarget": 0,
+    "imageQuery": "veal meat",
+    "active": true,
+    "sortOrder": 48
+  },
+  {
+    "id": 50,
+    "name": "Svinjetina",
+    "categoryId": 9,
+    "weeklyTarget": 0,
+    "imageQuery": "pork meat",
+    "active": true,
+    "sortOrder": 49
+  },
+  {
+    "id": 51,
+    "name": "Janjetina",
+    "categoryId": 9,
+    "weeklyTarget": 0,
+    "imageQuery": "lamb meat",
+    "active": true,
+    "sortOrder": 50
+  },
+  {
+    "id": 52,
+    "name": "Mlijeko",
+    "categoryId": 10,
+    "weeklyTarget": 0,
+    "imageQuery": "milk glass",
+    "active": true,
+    "sortOrder": 51
+  },
+  {
+    "id": 53,
+    "name": "Jogurt",
+    "categoryId": 10,
+    "weeklyTarget": 0,
+    "imageQuery": "yogurt bowl",
+    "active": true,
+    "sortOrder": 52
+  },
+  {
+    "id": 54,
+    "name": "Grčki jogurt",
+    "categoryId": 10,
+    "weeklyTarget": 0,
+    "imageQuery": "greek yogurt",
+    "active": true,
+    "sortOrder": 53
+  },
+  {
+    "id": 55,
+    "name": "Skyr",
+    "categoryId": 10,
+    "weeklyTarget": 0,
+    "imageQuery": "yogurt",
+    "active": true,
+    "sortOrder": 54
+  },
+  {
+    "id": 56,
+    "name": "Svježi sir",
+    "categoryId": 10,
+    "weeklyTarget": 0,
+    "imageQuery": "cottage cheese",
+    "active": true,
+    "sortOrder": 55
+  },
+  {
+    "id": 57,
+    "name": "Sir",
+    "categoryId": 10,
+    "weeklyTarget": 0,
+    "imageQuery": "cheese food",
+    "active": true,
+    "sortOrder": 56
+  },
+  {
+    "id": 58,
+    "name": "Kiselo vrhnje",
+    "categoryId": 10,
+    "weeklyTarget": 0,
+    "imageQuery": "sour cream",
+    "active": true,
+    "sortOrder": 57
+  },
+  {
+    "id": 59,
+    "name": "Orasi",
+    "categoryId": 11,
+    "weeklyTarget": 0,
+    "imageQuery": "walnuts nuts",
+    "active": true,
+    "sortOrder": 58
+  },
+  {
+    "id": 60,
+    "name": "Bademi",
+    "categoryId": 11,
+    "weeklyTarget": 0,
+    "imageQuery": "almonds nuts",
+    "active": true,
+    "sortOrder": 59
+  },
+  {
+    "id": 61,
+    "name": "Lješnjaci",
+    "categoryId": 11,
+    "weeklyTarget": 0,
+    "imageQuery": "hazelnuts",
+    "active": true,
+    "sortOrder": 60
+  },
+  {
+    "id": 62,
+    "name": "Pistacije",
+    "categoryId": 11,
+    "weeklyTarget": 0,
+    "imageQuery": "pistachios",
+    "active": true,
+    "sortOrder": 61
+  },
+  {
+    "id": 63,
+    "name": "Indijski oraščići",
+    "categoryId": 11,
+    "weeklyTarget": 0,
+    "imageQuery": "cashew nuts",
+    "active": true,
+    "sortOrder": 62
+  },
+  {
+    "id": 64,
+    "name": "Brazilski oraščići",
+    "categoryId": 11,
+    "weeklyTarget": 0,
+    "imageQuery": "brazil nuts",
+    "active": true,
+    "sortOrder": 63
+  },
+  {
+    "id": 65,
+    "name": "Kikiriki",
+    "categoryId": 11,
+    "weeklyTarget": 0,
+    "imageQuery": "peanuts",
+    "active": true,
+    "sortOrder": 64
+  },
+  {
+    "id": 66,
+    "name": "Mljeveni lan",
+    "categoryId": 12,
+    "weeklyTarget": 0,
+    "imageQuery": "flax seeds",
+    "active": true,
+    "sortOrder": 65
+  },
+  {
+    "id": 67,
+    "name": "Chia",
+    "categoryId": 12,
+    "weeklyTarget": 0,
+    "imageQuery": "chia seeds",
+    "active": true,
+    "sortOrder": 66
+  },
+  {
+    "id": 68,
+    "name": "Bučine sjemenke",
+    "categoryId": 12,
+    "weeklyTarget": 0,
+    "imageQuery": "pumpkin seeds",
+    "active": true,
+    "sortOrder": 67
+  },
+  {
+    "id": 69,
+    "name": "Suncokretove sjemenke",
+    "categoryId": 12,
+    "weeklyTarget": 0,
+    "imageQuery": "sunflower seeds",
+    "active": true,
+    "sortOrder": 68
+  },
+  {
+    "id": 70,
+    "name": "Sezam",
+    "categoryId": 12,
+    "weeklyTarget": 0,
+    "imageQuery": "sesame seeds",
+    "active": true,
+    "sortOrder": 69
+  },
+  {
+    "id": 71,
+    "name": "Mak",
+    "categoryId": 12,
+    "weeklyTarget": 0,
+    "imageQuery": "poppy seeds",
+    "active": true,
+    "sortOrder": 70
+  },
+  {
+    "id": 72,
+    "name": "Kruh",
+    "categoryId": 13,
+    "weeklyTarget": 0,
+    "imageQuery": "bread",
+    "active": true,
+    "sortOrder": 71
+  },
+  {
+    "id": 73,
+    "name": "Zobene pahuljice",
+    "categoryId": 13,
+    "weeklyTarget": 0,
+    "imageQuery": "oats",
+    "active": true,
+    "sortOrder": 72
+  },
+  {
+    "id": 74,
+    "name": "Muesli",
+    "categoryId": 13,
+    "weeklyTarget": 0,
+    "imageQuery": "muesli",
+    "active": true,
+    "sortOrder": 73
+  },
+  {
+    "id": 75,
+    "name": "Riža",
+    "categoryId": 13,
+    "weeklyTarget": 0,
+    "imageQuery": "rice food",
+    "active": true,
+    "sortOrder": 74
+  },
+  {
+    "id": 76,
+    "name": "Tjestenina",
+    "categoryId": 13,
+    "weeklyTarget": 0,
+    "imageQuery": "pasta food",
+    "active": true,
+    "sortOrder": 75
+  },
+  {
+    "id": 77,
+    "name": "Palenta",
+    "categoryId": 13,
+    "weeklyTarget": 0,
+    "imageQuery": "polenta",
+    "active": true,
+    "sortOrder": 76
+  },
+  {
+    "id": 78,
+    "name": "Bulgur",
+    "categoryId": 13,
+    "weeklyTarget": 0,
+    "imageQuery": "bulgur",
+    "active": true,
+    "sortOrder": 77
+  },
+  {
+    "id": 79,
+    "name": "Kus-kus",
+    "categoryId": 13,
+    "weeklyTarget": 0,
+    "imageQuery": "couscous",
+    "active": true,
+    "sortOrder": 78
+  },
+  {
+    "id": 80,
+    "name": "Ječam",
+    "categoryId": 13,
+    "weeklyTarget": 0,
+    "imageQuery": "barley grain",
+    "active": true,
+    "sortOrder": 79
+  },
+  {
+    "id": 81,
+    "name": "Proso",
+    "categoryId": 13,
+    "weeklyTarget": 0,
+    "imageQuery": "millet grain",
+    "active": true,
+    "sortOrder": 80
+  },
+  {
+    "id": 82,
+    "name": "Heljda",
+    "categoryId": 13,
+    "weeklyTarget": 0,
+    "imageQuery": "buckwheat",
+    "active": true,
+    "sortOrder": 81
+  },
+  {
+    "id": 83,
+    "name": "Krumpir",
+    "categoryId": 14,
+    "weeklyTarget": 0,
+    "imageQuery": "potato",
+    "active": true,
+    "sortOrder": 82
+  },
+  {
+    "id": 84,
+    "name": "Batat",
+    "categoryId": 14,
+    "weeklyTarget": 0,
+    "imageQuery": "sweet potato",
+    "active": true,
+    "sortOrder": 83
+  }
+]

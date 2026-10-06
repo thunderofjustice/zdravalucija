@@ -1,0 +1,5 @@
+[
+  {"meal":{"id":1,"name":"Bistra juha od povrća","imageQuery":"clear vegetable soup","active":true,"sortOrder":0},"foodIds":[4,5,6]},
+  {"meal":{"id":2,"name":"Juha od brokule","imageQuery":"broccoli soup","active":true,"sortOrder":1},"foodIds":[4]},
+  {"meal":{"id":3,"name":"Cijeđeni sok od naranče","imageQuery":"fresh orange juice","active":true,"sortOrder":2},"foodIds":[3]}
+]
