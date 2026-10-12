@@ -15,7 +15,7 @@ import hr.zdravalucija.data.FoodSnapshot
 internal fun FoodSnapshot.mealCategoryIds() = categories.filter { it.name.trim().equals("Jela", ignoreCase = true) }.map { it.id }.toSet()
 
 @Composable
-fun AddFoodScreen(state: LucijaState, vm: LucijaViewModel, initialCategory: Long? = null, close: () -> Unit) {
+fun AddFoodScreen(state: LucijaState, vm: LucijaViewModel, initialCategory: Long? = null, onDate: java.time.LocalDate? = null, close: () -> Unit) {
     // null = category picker, -1 = virtual meal collection, positive = real category.
     val mealCategoryIds = state.snapshot.mealCategoryIds()
     var selected by rememberSaveable { mutableStateOf<Long?>(if (initialCategory in mealCategoryIds) -1L else initialCategory) }
@@ -30,7 +30,8 @@ fun AddFoodScreen(state: LucijaState, vm: LucijaViewModel, initialCategory: Long
         }
         LazyVerticalGrid(GridCells.Adaptive(150.dp), contentPadding = PaddingValues(start = 22.dp, end = 22.dp, bottom = 28.dp),
             horizontalArrangement = Arrangement.spacedBy(14.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-            item(span = { GridItemSpan(maxLineSpan) }) { ScreenHeading(title, if (selected == null) "Odaberi što je bilo na tvom tanjuru." else "Jedan dodir i zabilježeno je.") }
+            item(span = { GridItemSpan(maxLineSpan) }) { ScreenHeading(title, onDate?.let { "Za: ${displayDate(it)} ${it.year}." }
+                ?: if (selected == null) "Odaberi što je bilo na tvom tanjuru." else "Jedan dodir i zabilježeno je.") }
             if (selected == null) {
                 items(categories, key = { it.id }) { category ->
                     VisualCard(category.name, category.imageUrl, category.imageQuery, onClick = { selected = category.id })
@@ -41,14 +42,14 @@ fun AddFoodScreen(state: LucijaState, vm: LucijaViewModel, initialCategory: Long
                 }
             } else if (selected == -1L) {
                 items(state.snapshot.meals.filter { it.active }, key = { "meal-${it.id}" }) { meal ->
-                    VisualCard(meal.name, meal.imageUrl, meal.imageQuery, onClick = { vm.addMeal(meal) })
+                    VisualCard(meal.name, meal.imageUrl, meal.imageQuery, onClick = { vm.addMeal(meal, onDate) })
                 }
                 items(state.snapshot.foods.filter { it.active && it.categoryId in mealCategoryIds && state.snapshot.categories.any { category -> category.id == it.categoryId && category.active } }, key = { "food-${it.id}" }) { food ->
-                    VisualCard(food.name, food.imageUrl, state.snapshot.visualQuery(food), onClick = { vm.addFood(food) })
+                    VisualCard(food.name, food.imageUrl, state.snapshot.visualQuery(food), onClick = { vm.addFood(food, onDate) })
                 }
             } else {
                 items(state.snapshot.foods.filter { it.active && it.categoryId == selected }, key = { it.id }) { food ->
-                    VisualCard(food.name, food.imageUrl, state.snapshot.visualQuery(food), onClick = { vm.addFood(food) })
+                    VisualCard(food.name, food.imageUrl, state.snapshot.visualQuery(food), onClick = { vm.addFood(food, onDate) })
                 }
             }
         }

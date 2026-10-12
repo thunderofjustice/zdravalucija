@@ -60,4 +60,21 @@ class ProgressTest {
         assertEquals(LocalDate.of(2026,9,30),cycle.start)
         assertEquals(LocalDate.of(2026,10,6),cycle.end)
     }
+    @Test fun historicalDailyOverviewShowsMetAndUnmetGoalsWithoutCountingOtherDates() {
+        val past = date.minusDays(2)
+        val result = GetDailyProgressUseCase()(listOf(category(1,14),category(2,7),category(3,2)), foods,
+            listOf(entry(1,past),entry(2,past),entry(3,date)), past)
+        assertEquals(2,result.size)
+        assertEquals(2,result[0].consumed)
+        assertEquals(0,result[0].remaining)
+        assertEquals(0,result[1].consumed)
+        assertEquals(1,result[1].remaining)
+    }
+    @Test fun historicalDayCountingUsesOneDayAndWeekRespectsCustomBoundary() {
+        val past = date.minusWeeks(1)
+        val categories = listOf(category(1,7,"DAYS"))
+        val rows = listOf(entry(1,past),entry(2,past),entry(1,past.minusDays(1)),entry(1,date))
+        assertEquals(1,GetDailyProgressUseCase()(categories,foods,rows,past).single().consumed)
+        assertEquals(2,GetWeeklyProgressUseCase()(categories,foods,rows,WeekCycle.containing(past,DayOfWeek.SUNDAY)).single().weeklyConsumed)
+    }
 }

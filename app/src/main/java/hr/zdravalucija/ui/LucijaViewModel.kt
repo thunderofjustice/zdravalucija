@@ -93,14 +93,14 @@ class LucijaViewModel(val container: AppContainer) : ViewModel() {
             messages.send(UiMessage(error.message ?: "Pokušaj ponovno."))
         }
     }
-    fun addFood(food: FoodEntity) = action {
+    fun addFood(food: FoodEntity, onDate: LocalDate? = null) = action {
         refreshDate()
-        val group = AddFoodConsumptionUseCase(container.repository)(food.id)
+        val group = AddFoodConsumptionUseCase(container.repository)(food.id, onDate)
         messages.send(UiMessage("Dodano: ${food.name}", group, true))
     }
-    fun addMeal(meal: MealEntity) = action {
+    fun addMeal(meal: MealEntity, onDate: LocalDate? = null) = action {
         refreshDate()
-        val group = AddMealConsumptionUseCase(container.repository)(meal.id)
+        val group = AddMealConsumptionUseCase(container.repository)(meal.id, onDate)
         messages.send(UiMessage("Dodano: ${meal.name}", group, true))
     }
     fun undo(group: String) = action { DeleteEntryGroupUseCase(container.repository)(group) }

@@ -37,7 +37,7 @@ fun WeeklyScreen(state: LucijaState) {
 }
 
 @Composable
-private fun WeeklyFoodRow(progress: WeeklyProgress, visualQuery: String?) {
+internal fun WeeklyFoodRow(progress: WeeklyProgress, visualQuery: String?) {
     val ratio by animateFloatAsState((progress.weeklyConsumed.toFloat() / progress.weeklyTarget).coerceIn(0f, 1f), label = "Tjedni napredak")
     Card(shape = RoundedCornerShape(26.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
         Row(Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {

@@ -30,6 +30,30 @@ class RoomRepositoryTest {
         repo.addFoodConsumption(1)
         assertEquals("2026-10-05",db.dao().entries().single().localDate)
     }
+    @Test fun pastFoodAndMealUseSelectedLocalDayAndKeepGroupUndoIsolated() = runBlocking {
+        val past = java.time.LocalDate.of(2026, 10, 1)
+        val direct = repo.addFoodConsumption(4,past)
+        val meal = repo.addMealConsumption(1,past)
+        repo.addFoodConsumption(1)
+        val historical = db.dao().entries().filter { it.localDate == past.toString() }
+        assertEquals(4,historical.size)
+        assertTrue(historical.all { Instant.ofEpochMilli(it.consumedAt).atZone(ZoneId.of("Europe/Zagreb")).toLocalDate() == past })
+        assertEquals(1,historical.map { it.consumedAt }.distinct().size)
+        assertEquals(3,historical.count { it.sourceMealId == 1L && it.entryGroupId == meal })
+        repo.deleteEntryGroup(meal)
+        assertEquals(1,db.dao().entries().count { it.entryGroupId == direct })
+        assertEquals(1,db.dao().entries().count { it.localDate == "2026-10-05" })
+    }
+    @Test fun futureFoodAndMealAreRejectedWithoutPartialEntries() = runBlocking {
+        val future = java.time.LocalDate.of(2026,10,6)
+        for (isMeal in listOf(false,true)) {
+            var rejected = false
+            try { if (isMeal) repo.addMealConsumption(1,future) else repo.addFoodConsumption(1,future) }
+            catch (_: IllegalArgumentException) { rejected = true }
+            assertTrue(rejected)
+        }
+        assertTrue(db.dao().entries().isEmpty())
+    }
     @Test fun mealUndoPreservesSeparateManualBroccoli() = runBlocking {
         val direct = repo.addFoodConsumption(4)
         val firstMeal = repo.addMealConsumption(1)

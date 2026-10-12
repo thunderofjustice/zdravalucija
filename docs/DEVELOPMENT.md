@@ -23,6 +23,14 @@ Validated on Windows with the installed Android Studio JDK, Android SDK 34, Grad
 - History and settings/editors: `assembleDebug` passed.
 - Images, theme, icon and backup: combined build, unit tests, instrumented tests and lint run on Android 15 / API 35 emulator.
 
+## Version 1.5: historical entry and goal overview
+
+History now offers daily and weekly lists with fulfillment summaries, a calendar for opening previous dates (including empty days), historical food/meal quick entry, and day-to-week navigation. Daily progress includes met and unmet checklist goals derived from weeklyTarget; weekly history reuses the existing progress engine and the configured first weekday. Date/view changes reset scroll to the heading. Historical calculations explicitly use current goals/category membership; previous goal configurations are not reconstructed.
+
+Consumption repositories/use cases accept an optional date, preserve selected localDate and create a timestamp for that local day in the user's zone. Meals retain one transaction and shared group/timestamp; future dates are rejected before inserts. Existing entries, Room schema v2 and JSON backup fields are unchanged. Version 1.5.0 (versionCode 7).
+
+Validation: `assembleDebug` and `lintDebug` passed. Twenty-six unit tests passed, including historical daily fulfillment and day counting/custom week boundaries. Nine Room instrumentation tests passed, including historical food/meal dating, isolated group Undo, future-date rejection and existing history/backup behavior. The end-to-end historical UI test passed after adding scroll reset: calendar cancellation, two food entries for yesterday, daily fulfillment, the matching historical week, meal entry for yesterday and Undo preserving the food entries. Its temporary entries are removed in finally; user data/preferences remain intact.
+
 ## Version 1.4: own photographs
 
 Food, category and meal editors include `Odaberi svoju sliku` alongside Pixabay replacement. Android's image-only picker grants access to the selected picture. Photos are decoded, oriented, scaled to at most 1600 pixels, copied into private storage and assigned with guards against concurrent edits. Cancellation and invalid files keep the original photo. Renaming preserves custom images; the image worker skips them. JSON backups embed referenced custom photos by content hash, deduplicate shared pictures and restore them locally before restoring rows. Existing v1/v2 backups remain supported, and Room schema remains v2.

@@ -19,6 +19,10 @@ data class WeeklyProgress(val category: CategoryEntity, val weeklyConsumed: Int)
 }
 
 data class TodayRemaining(val category: CategoryEntity, val remaining: Int)
+data class DailyProgress(val category: CategoryEntity, val consumed: Int) {
+    val target get() = dailyChecklistCount(category)
+    val remaining get() = (target - consumed).coerceAtLeast(0)
+}
 
 /** Daily checklist is derived solely from weeklyTarget: 7 -> 1, 14 -> 2, etc. */
 fun dailyChecklistCount(category: CategoryEntity): Int =
@@ -33,12 +37,16 @@ private fun count(category: CategoryEntity, rows: List<ConsumptionEntryEntity>):
 
 class GetTodayRemainingCategoriesUseCase {
     operator fun invoke(categories: List<CategoryEntity>, foods: List<FoodEntity>, entries: List<ConsumptionEntryEntity>, date: LocalDate): List<TodayRemaining> {
+        return GetDailyProgressUseCase()(categories, foods, entries, date).filter { it.remaining > 0 }
+            .map { TodayRemaining(it.category, it.remaining) }
+    }
+}
+class GetDailyProgressUseCase {
+    operator fun invoke(categories: List<CategoryEntity>, foods: List<FoodEntity>, entries: List<ConsumptionEntryEntity>, date: LocalDate): List<DailyProgress> {
         val foodCategories = foods.associate { it.id to it.categoryId }
         val rows = entries.filter { it.localDate == date.toString() }.groupBy { foodCategories[it.foodId] }
-        return categories.filter { it.active && dailyChecklistCount(it) > 0 }.mapNotNull { category ->
-            val remaining = (dailyChecklistCount(category) - count(category, rows[category.id].orEmpty())).coerceAtLeast(0)
-            if (remaining > 0) TodayRemaining(category, remaining) else null
-        }
+        return categories.filter { it.active && dailyChecklistCount(it) > 0 }
+            .map { DailyProgress(it, count(it, rows[it.id].orEmpty())) }
     }
 }
 class GetWeeklyProgressUseCase {
@@ -54,10 +62,10 @@ class GetWeeklyRemainingCategoriesUseCase {
     operator fun invoke(progress: List<WeeklyProgress>) = progress.filter { it.remaining > 0 }
 }
 class AddFoodConsumptionUseCase(private val repository: FoodRepository) {
-    suspend operator fun invoke(foodId: Long) = repository.addFoodConsumption(foodId)
+    suspend operator fun invoke(foodId: Long, date: LocalDate? = null) = repository.addFoodConsumption(foodId, date)
 }
 class AddMealConsumptionUseCase(private val repository: FoodRepository) {
-    suspend operator fun invoke(mealId: Long) = repository.addMealConsumption(mealId)
+    suspend operator fun invoke(mealId: Long, date: LocalDate? = null) = repository.addMealConsumption(mealId, date)
 }
 class DeleteConsumptionUseCase(private val repository: FoodRepository) {
     suspend operator fun invoke(entryId: Long) = repository.deleteEntry(entryId)

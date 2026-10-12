@@ -10,12 +10,15 @@ Pregled na emulatoru sa stvarnim Pixabay fotografijama: [Danas · svijetli izgle
 - **+ → kategorija → namirnica:** jedan dodir = jedan unos. Možeš dodati više namirnica, zatim dodirnuti **GOTOVO**.
 - **Jela:** jedan dodir bilježi sve sastavne namirnice u jednoj transakciji. **UNDO** briše samo zapise tog dodira.
 - **TJEDAN:** zajednički ciljevi kategorija, preostali unosi ili dani i ostvareni ciljevi.
-- **POVIJEST:** otvori datum; ukloni jedan zapis ili cijeli unos jela.
+- **POVIJEST → Dani:** pregled unosa i ostvarenih dnevnih ciljeva; otvori dan pa **Dodaj hranu za ovaj dan** za naknadni unos namirnice ili jela. Prikazuju se i posljednjih sedam dana bez unosa; **Odaberi datum** otvara bilo koji prethodni dan. Budući datumi nisu dopušteni.
+- **POVIJEST → Tjedni:** ostvarenost tjednih ciljeva, preostali unosi/dani i pregled pojedinačnih dana ciklusa. Iz dnevnog pregleda možeš otvoriti pripadajući tjedan. Pojedinačno brisanje i grupni Undo jela vrijede i za prethodne dane.
 - **POSTAVKE:** namirnice, ciljevi kategorija, jela i njihove namirnice, prehrambeni popis, prvi dan tjedna, izgled i JSON backup.
 - **Druga fotografija:** Postavke → Namirnice / Kategorije / Jela → odaberi stavku → **Dohvati drugu sliku**. Gumb bira sljedeću Pixabay fotografiju za engleski naziv i odmah je sprema za offline prikaz. Ako dohvat ne uspije ili nema alternative, trenutna fotografija ostaje spremljena. Novi naziv najprije spremi.
 - **Vlastita fotografija:** u istom uređivanju dodirni **Odaberi svoju sliku**. Otvara se Androidov odabir fotografije; odabrana slika odmah se kopira u aplikaciju i koristi bez interneta. Odustajanje ili nevaljana datoteka zadržavaju prethodnu sliku. Za novu stavku najprije spremi naziv. Vlastitu sliku možeš kasnije zamijeniti drugom svojom ili Pixabay fotografijom.
 
 [Prikaz uređivanja fotografije](docs/screenshots/image-editor.png).
+
+Povijesni pregled računa ciljeve prema trenutačnim kategorijama, njihovim ciljevima i odabranom početku tjedna. Ranije verzije ciljeva nisu zasebno spremljene.
 
 JSON sigurnosna kopija uključuje vlastite fotografije. One ostaju povezane sa stavkom i nakon promjene naziva. Aplikacija ne traži pristup cijeloj galeriji.
 

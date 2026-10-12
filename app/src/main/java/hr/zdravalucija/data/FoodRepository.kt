@@ -26,8 +26,8 @@ interface FoodRepository {
     fun observeMeals(): Flow<List<MealEntity>>
     fun observeEntriesForDate(date: LocalDate): Flow<List<ConsumptionEntryEntity>>
     fun observeEntriesForWeek(startDate: LocalDate, endDate: LocalDate): Flow<List<ConsumptionEntryEntity>>
-    suspend fun addFoodConsumption(foodId: Long): String
-    suspend fun addMealConsumption(mealId: Long): String
+    suspend fun addFoodConsumption(foodId: Long, date: LocalDate? = null): String
+    suspend fun addMealConsumption(mealId: Long, date: LocalDate? = null): String
     suspend fun deleteEntry(entryId: Long)
     suspend fun deleteEntryGroup(entryGroupId: String)
     suspend fun updateFood(food: FoodEntity): Long
@@ -87,34 +87,37 @@ class RoomFoodRepository(
     override fun observeEntriesForDate(date: LocalDate) = dao.observeEntriesForDate(date.toString())
     override fun observeEntriesForWeek(startDate: LocalDate, endDate: LocalDate) = dao.observeEntriesForWeek(startDate.toString(), endDate.toString())
 
-    override suspend fun addFoodConsumption(foodId: Long): String {
+    private fun consumptionMoment(date: LocalDate?): Pair<Long, String> {
+        val now = clock()
+        val localNow = now.instant().atZone(now.zone)
+        val selected = date ?: localNow.toLocalDate()
+        require(!selected.isAfter(localNow.toLocalDate())) { "Unos za budući datum nije dopušten." }
+        return selected.atTime(localNow.toLocalTime()).atZone(now.zone).toInstant().toEpochMilli() to selected.toString()
+    }
+    override suspend fun addFoodConsumption(foodId: Long, date: LocalDate?): String {
         initialize()
         val group = UUID.randomUUID().toString()
-        val now = clock()
-        val instant = now.instant()
-        val date = instant.atZone(now.zone).toLocalDate().toString()
+        val (timestamp, localDate) = consumptionMoment(date)
         db.withTransaction {
             val food = requireNotNull(dao.food(foodId)) { "Namirnica ne postoji." }
             require(food.active && dao.category(food.categoryId)?.active == true) { "Namirnica nije aktivna." }
-            dao.insertEntries(listOf(ConsumptionEntryEntity(foodId = foodId, consumedAt = instant.toEpochMilli(),
-                localDate = date, entryGroupId = group)))
+            dao.insertEntries(listOf(ConsumptionEntryEntity(foodId = foodId, consumedAt = timestamp,
+                localDate = localDate, entryGroupId = group)))
         }
         return group
     }
 
-    override suspend fun addMealConsumption(mealId: Long): String {
+    override suspend fun addMealConsumption(mealId: Long, date: LocalDate?): String {
         initialize()
         val group = UUID.randomUUID().toString()
-        val now = clock()
-        val instant = now.instant()
-        val date = instant.atZone(now.zone).toLocalDate().toString()
+        val (timestamp, localDate) = consumptionMoment(date)
         db.withTransaction {
             require(dao.meal(mealId)?.active == true) { "Jelo nije aktivno." }
             val foods = dao.foodsForMeal(mealId)
             require(foods.isNotEmpty()) { "Odaberi barem jednu namirnicu u jelu." }
             // A meal always inserts all its members, including archived members retained for history.
-            dao.insertEntries(foods.map { ConsumptionEntryEntity(foodId = it.id, consumedAt = instant.toEpochMilli(),
-                localDate = date, sourceMealId = mealId, entryGroupId = group) })
+            dao.insertEntries(foods.map { ConsumptionEntryEntity(foodId = it.id, consumedAt = timestamp,
+                localDate = localDate, sourceMealId = mealId, entryGroupId = group) })
         }
         return group
     }

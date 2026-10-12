@@ -94,7 +94,11 @@ fun LucijaApp(vm: LucijaViewModel) {
                     composable("add") { AddFoodScreen(state, vm) { nav.popBackStack() } }
                     composable("add/{category}") { entry -> AddFoodScreen(state, vm, entry.arguments?.getString("category")?.toLongOrNull()) { nav.popBackStack() } }
                     composable("week") { WeeklyScreen(state) }
-                    composable("history") { HistoryScreen(state, vm) }
+                    composable("history") { HistoryScreen(state, vm, addForDate = { nav.navigate("add-date/$it") }) }
+                    composable("add-date/{date}") { entry ->
+                        val selectedDate = java.time.LocalDate.parse(entry.arguments?.getString("date"))
+                        AddFoodScreen(state, vm, onDate = selectedDate) { nav.popBackStack() }
+                    }
                     composable("settings") { SettingsScreen(state, vm, navigate = { nav.navigate(it) },
                         export = { export.launch("zdrava-lucija-${state.today}.json") }, import = { import.launch(arrayOf("application/json", "text/plain")) }) }
                     composable("manage/{type}") { entry -> ManageScreen(entry.arguments?.getString("type") ?: "foods", state,

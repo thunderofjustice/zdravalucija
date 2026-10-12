@@ -19,6 +19,10 @@ Preferences use DataStore. Only image resolution and user-requested photo replac
 
 ## Structure
 `data/`: Room, preferences, backup, JSON seed and image provider.
+
+Food and meal consumption accept an optional selected LocalDate. Default entries use the user's current local day; historical entries use the selected date and current local time in the user's zone. Future dates are rejected before inserts, and meal members still share a transaction, timestamp and group. Existing entities, Room schema v2 and JSON backup shape are unchanged.
+
+`GetDailyProgressUseCase` exposes all daily-checklist categories, including completed ones, with targets derived from weeklyTarget. Today remaining reuses this result. History offers days and weeks, an image-free calendar picker with UTC date conversion, historical quick entry, individual/group deletion, and weekly progress using the configured first weekday. It includes recent empty days/weeks and lets the user select older empty dates. Historical fulfillment is computed against current goals/category membership; the UI labels this limitation instead of implying historical goal snapshots.
 `domain/`: pure cycle/progress rules and small use cases.
 `ui/`: navigation, screens, editors, reusable visual cards and theme.
 
